@@ -9,24 +9,25 @@ def order_objects_by_color(input_objects):
     sorted_objects = sorted(input_objects, key=lambda x: color_mapping.get(x, 0))  # Сортируем объекты по порядку цветов
     return sorted_objects
 
-while True:
-    # Запрос ввода объектов у пользователя
-    input_objects = input("Введите список объектов (буквы С З К без разделителей): ").strip()
+if __name__ == "__main__": #Проверяем что модуль главный
+    while True:
+        # Запрос ввода объектов у пользователя
+        input_objects = input("Введите список объектов (буквы С З К без разделителей): ").strip()
 
-    # Вызываем функцию
-    output_objects = order_objects_by_color(input_objects)
+        # Вызываем функцию
+        output_objects = order_objects_by_color(input_objects)
 
-    # Выводим сообщение "Результат:" без перевода строки
-    print("Результат:", end=" ")
+        # Выводим сообщение "Результат:" без перевода строки
+        print("Результат:", end=" ")
 
-    # Выводим отсортированный набор объектов с пробелами в качестве разделителя
-    for obj in output_objects:
-        print(obj, end=" ")
+        # Выводим отсортированный набор объектов с пробелами в качестве разделителя
+        for obj in output_objects:
+            print(obj, end=" ")
 
-    # Переход на новую строку для следующего вывода
-    print()
+        # Переход на новую строку для следующего вывода
+        print()
 
-    # Запрос на продолжение или завершение программы
-    response = input("Нажмите Enter чтобы ввести новые данные или 'q' для выхода: ")
-    if response.lower() == 'q':
-        break
+        # Запрос на продолжение или завершение программы
+        response = input("Нажмите Enter чтобы ввести новые данные или 'q' для выхода: ")
+        if response.lower() == 'q':
+            break
