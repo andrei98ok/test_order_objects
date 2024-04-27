@@ -9,7 +9,7 @@ def order_objects_by_color(input_objects):
     sorted_objects = sorted(input_objects, key=lambda x: color_mapping.get(x, 0))  # Сортируем объекты по порядку цветов
     return sorted_objects
 
-if __name__ == "__main__": #Проверяем что модуль главный
+if __name__ == "__main__": #Код ниже будет выполняться только при запуске через order_objects.py
     while True:
         # Запрос ввода объектов у пользователя
         input_objects = input("Введите список объектов (буквы С З К без разделителей): ").strip()
